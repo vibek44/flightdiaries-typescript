@@ -6,8 +6,8 @@ POST http://localhost:3000/api/diaries
 Content-Type: application/json
 
 {
-  "date": "10.04.2023",
-  "weather": "rainy",
-  "visibility": "poor",
+  "date": "11.04.2023",
+  "weather": "god",
+  "visibility": "good",
   "comment":"wetty and greeny"
 }
