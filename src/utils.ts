@@ -10,11 +10,11 @@ const isDate=(date:string):boolean=>{
 };
 
 const isVisibility=(param:string):param is Visibility=>{
-   return ['great' , 'good' ,'ok' ,'poor'].includes(param);
+   return Object.values(Visibility).map(v=>v.toString()).includes(param);
 };
 
 const isWeather=(weather:string):weather is Weather =>{
-  return ['sunny' , 'rainy' , 'cloudy' , 'windy' , 'stormy'].includes(weather);
+  return Object.values(Weather).map(v=>v.toString()).includes(weather);
 };
 
 const parseComment=(comment:unknown):string=>{
