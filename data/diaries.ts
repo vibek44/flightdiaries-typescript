@@ -1,5 +1,7 @@
+import getNewDiaryEntry from '../src/utils';
 import { DiaryEntry } from '../src/types';
-const diaryEntry:DiaryEntry[]=[
+
+const data=[
   {
       "id": 1,
       "date": "2017-01-01",
@@ -30,4 +32,11 @@ const diaryEntry:DiaryEntry[]=[
   }
 ];
 
-export default diaryEntry;
+const diaryEntries:DiaryEntry[]=data.map(obj=>{
+    const object=getNewDiaryEntry(obj) as DiaryEntry;
+    object.id=obj.id;
+    return object;
+});
+
+
+export default diaryEntries;
